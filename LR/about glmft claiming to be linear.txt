@@ -1,0 +1,15 @@
+GLMFIT Fit a generalized linear model.
+%   B = GLMFIT(X,Y,DISTR) fits a generalized linear model using the
+%   predictor matrix X, response Y, and distribution DISTR.  The result B
+%   is a vector of coefficient estimates.  Acceptable values for DISTR are
+%   'normal', 'binomial', 'poisson', 'gamma', and 'inverse gaussian'.  The
+%   distribution is fit using the canonical link corresponding to DISTR.
+%
+%   X is a matrix with rows corresponding to observations, and columns to
+%   predictor variables.  GLMFIT automatically includes a constant term in the
+%   model (do not enter a column of ones directly into X).  Y is a vector of
+%   response values.  If DISTR is 'binomial' Y may a binary vector indicating
+%   success/failure, and the total number of trials is taken to be 1 for all
+%   observations.  If DISTR is 'binomial', Y may also be a two column matrix,
+%   the first column containing the number of successes for each observation,
+%   and the second containing the total number of trials.

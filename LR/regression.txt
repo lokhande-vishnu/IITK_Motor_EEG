@@ -1,0 +1,22 @@
+model = glmfit(X, y, 'binomial');
+y_hat = glmval(model, X, 'logit');
+
+for j = 1:10
+    indices = crossvalind('Kfold',y,10);
+    for i = 1:10
+        test = (indices == i); train = ~test;
+        [b,dev,stats] = glmfit(X(train,:),y(train),'binomial','logit');
+        Fit(j,i) = glmval(b,X(test,:),'logit');
+    end
+end
+abc=zeros(10,10);
+for j = 1:10
+    indices = crossvalind('Kfold',y,10);
+    for i = 1:10
+        test = (indices == i); train = ~test;
+        [b,dev,stats] = glmfit(X(train,:),y(train),'binomial','logit');
+        
+        temp= glmval(b,X(test,:),'logit');
+	abc(:,i)=temp; 
+    end
+end
