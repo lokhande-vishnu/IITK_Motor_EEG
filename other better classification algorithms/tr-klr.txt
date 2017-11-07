@@ -1,4 +1,0 @@
-Abstract
-Kernel logistic regression (KLR) is a powerful nonlinear classifier. The combination of KLR and the truncated-regularized iteratively re-weighted least-squares (TR-IRLS) algorithm, has led to a powerful classification method using small-to-medium size data sets. This method (algorithm), is called truncated-regularized kernel logistic regression (TR-KLR). Compared to support vector machines (SVM) and TR-IRLS on twelve benchmark publicly available data sets, the proposed TR-KLR algorithm is as accurate as, and much faster than, SVM and more accurate than TR-IRLS. The TR-KLR algorithm also has the advantage of providing direct prediction probabilities.
-
-http://link.springer.com/article/10.1007%2Fs10287-010-0128-1
